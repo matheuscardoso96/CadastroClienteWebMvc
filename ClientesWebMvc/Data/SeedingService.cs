@@ -109,8 +109,8 @@ namespace ClientesWebMvc.Data
 
             //Criar Clientes
             Cliente cliente1 = new Cliente(1, DateTime.Now, new DateTime(1996, 10, 17), "Daniel", "Blue", "000000000", "SSPGO", "10000000000", tipoPessoa1);
-            Cliente cliente2 = new Cliente(1, DateTime.Now, new DateTime(1989, 08, 06), "Vicente", "Red", "100000000", "SSPSP", "20000000000", tipoPessoa1);
-            Cliente cliente3 = new Cliente(1, DateTime.Now, new DateTime(1994, 01, 30), "Faculdade São João Ribeiro", "FSJR", "1200000000", "SSPSP", "89000000000000", tipoPessoa2);
+            Cliente cliente2 = new Cliente(2, DateTime.Now, new DateTime(1989, 08, 06), "Vicente", "Red", "100000000", "SSPSP", "20000000000", tipoPessoa1);
+            Cliente cliente3 = new Cliente(3, DateTime.Now, new DateTime(1994, 01, 30), "Faculdade São João Ribeiro", "FSJR", "1200000000", "SSPSP", "89000000000000", tipoPessoa2);
 
 
             //Criar Endereços

@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ClientesWebMvc.Models;
 using ClientesWebMvc.Data;
-
+using ClientesWebMvc.Services;
 namespace ClientesWebMvc
 {
     public class Startup
@@ -42,6 +42,11 @@ namespace ClientesWebMvc
             builder.MigrationsAssembly("ClientesWebMvc")));
 
             services.AddScoped<SeedingService>();
+
+            services.AddScoped<UfService>();
+            services.AddScoped<CidadeService>();
+            services.AddScoped<ClienteService>();
+            services.AddScoped<ClienteEnderecoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
