@@ -8,7 +8,8 @@ namespace ClientesWebMvc.Models
     public class Cliente
     {
         public int Id { get; set; }
-        public DateTime Registro { get; set; }
+        public DateTime DataRegistro { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string NomeOuRazaoSocial { get; set; }
         public string SobrenomeOUNomeFantasia { get; set; }
         public string RgOuIe { get; set; }
@@ -21,17 +22,17 @@ namespace ClientesWebMvc.Models
         {
         }
 
-        public Cliente(int id, DateTime registro, string nomeOuRazaoSocial, string sobrenomeOUNomeFantasia, string rgOuIe, string orGaoExpedidor, string cpfOuCpnj, TipoPessoa tipoPessoa, ICollection<ClienteEndereco> clienteEnderecos)
+        public Cliente(int id, DateTime dataRegistro, DateTime dataNascimento, string nomeOuRazaoSocial, string sobrenomeOUNomeFantasia, string rgOuIe, string orGaoExpedidor, string cpfOuCpnj, TipoPessoa tipoPessoa)
         {
             Id = id;
-            Registro = registro;
+            DataRegistro = dataRegistro;
+            DataNascimento = dataNascimento;
             NomeOuRazaoSocial = nomeOuRazaoSocial;
             SobrenomeOUNomeFantasia = sobrenomeOUNomeFantasia;
             RgOuIe = rgOuIe;
             OrGaoExpedidor = orGaoExpedidor;
             CpfOuCpnj = cpfOuCpnj;
             TipoPessoa = tipoPessoa;
-            ClienteEnderecos = clienteEnderecos;
         }
 
 

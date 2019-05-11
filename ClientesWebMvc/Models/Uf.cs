@@ -8,6 +8,7 @@ namespace ClientesWebMvc.Models
     public class Uf
     {
         public int Id { get; set; }
+        public string Sigla { get; set; }
         public string Descricao { get; set; }
         public Pais Pais { get; set; }
         public ICollection<Cidade> Cidades { get; set; } = new List<Cidade>();
@@ -16,9 +17,10 @@ namespace ClientesWebMvc.Models
         {
         }
 
-        public Uf(int id, string descricao, Pais pais)
+        public Uf(int id, string sigla ,string descricao, Pais pais)
         {
             Id = id;
+            Sigla = sigla;
             Descricao = descricao;
             Pais = pais;
         }

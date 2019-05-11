@@ -4,10 +4,23 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClientesWebMvc.Migrations
 {
-    public partial class OutrasEntidades : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Pais",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pais", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "TipoEndereco",
                 columns: table => new
@@ -40,6 +53,7 @@ namespace ClientesWebMvc.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Sigla = table.Column<string>(nullable: true),
                     Descricao = table.Column<string>(nullable: true),
                     PaisId = table.Column<int>(nullable: true)
                 },
@@ -60,7 +74,8 @@ namespace ClientesWebMvc.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Registro = table.Column<DateTime>(nullable: false),
+                    DataRegistro = table.Column<DateTime>(nullable: false),
+                    DataNascimento = table.Column<DateTime>(nullable: false),
                     NomeOuRazaoSocial = table.Column<string>(nullable: true),
                     SobrenomeOUNomeFantasia = table.Column<string>(nullable: true),
                     RgOuIe = table.Column<string>(nullable: true),
@@ -188,6 +203,9 @@ namespace ClientesWebMvc.Migrations
 
             migrationBuilder.DropTable(
                 name: "TipoPessoa");
+
+            migrationBuilder.DropTable(
+                name: "Pais");
         }
     }
 }

@@ -40,11 +40,13 @@ namespace ClientesWebMvc.Migrations
 
                     b.Property<string>("CpfOuCpnj");
 
+                    b.Property<DateTime>("DataNascimento");
+
+                    b.Property<DateTime>("DataRegistro");
+
                     b.Property<string>("NomeOuRazaoSocial");
 
                     b.Property<string>("OrGaoExpedidor");
-
-                    b.Property<DateTime>("Registro");
 
                     b.Property<string>("RgOuIe");
 
@@ -137,6 +139,8 @@ namespace ClientesWebMvc.Migrations
                     b.Property<string>("Descricao");
 
                     b.Property<int?>("PaisId");
+
+                    b.Property<string>("Sigla");
 
                     b.HasKey("Id");
 
