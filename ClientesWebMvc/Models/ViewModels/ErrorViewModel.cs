@@ -1,6 +1,6 @@
 using System;
 
-namespace ClientesWebMvc.Models
+namespace ClientesWebMvc.Models.ViewModels
 {
     public class ErrorViewModel
     {
